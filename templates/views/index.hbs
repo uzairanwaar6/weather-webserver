@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+{{>header}}
+
+<body>
+    <div class="main-content">
+        {{>navigation}}
+        <h1>
+            Weather Search
+        </h1>
+        <form>
+            <input type="text" placeholder="Location" />
+            <button>Search</button>
+        </form>
+        <p id='errorMessage'></p>
+        <p id='successMessage'></p>
+    </div>
+    {{>footer}}
+
+    {{>scripts}}
+</body>
+
+</html>

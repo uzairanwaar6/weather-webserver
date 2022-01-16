@@ -1,0 +1,12 @@
+{
+            'name': 'weather',
+            'body': 'Weather Information'
+        },
+        {
+            'name': 'forecast',
+            'body': 'forecast info'
+        },
+        {
+            'name': 'location',
+            'body': 'Location content'
+        }
