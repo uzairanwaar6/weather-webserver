@@ -1,5 +1,4 @@
-const getWeather = (address, callback) => {
-    const urlPrefix = `http://localhost:3000/`;
+const getWeather = (address, callback) => {    
     const url = `weather?address=${address}`;
     fetch(url)
         .then((response) => {
