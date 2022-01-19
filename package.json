@@ -4,7 +4,7 @@
   "description": "Project to Practice Web Servers in Node.js",
   "main": "app.js",
   "scripts": {
-    "start": "node .\\src\\app.js"
+    "start": "node ./src/app.js"
   },
   "author": "Uzair",
   "license": "ISC",
