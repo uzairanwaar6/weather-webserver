@@ -6,10 +6,10 @@ const forecast = (req, res, callback) => {
     if (!includes) {
         includes = 'current'
     }
-    else{
+    else {
         includes += ',current'
     }
-    
+
     if (!address) {
         return callback({
             location: address,
@@ -21,16 +21,18 @@ const forecast = (req, res, callback) => {
         inLocation: address,
         inIncludes: includes,
         callback: (error, response) => {
+            weather.log(true);
 
             if (error) {
                 response = {
-                    error:error
+                    error: error
                 };
-                
             }
             else {
-                const { temp, conditions } = response.currentConditions;
-                response.forecast = `The current temprature is ${temp} and the environment is ${conditions}`;
+                const { temp, sunrise, sunset, humidity } = response.currentConditions;
+                response.forecast = `The current temprature is ${temp} and the humidity is ${humidity}.
+                The sunreise time is ${sunrise} and the sunset time is ${sunset}
+                `;
             }
 
             response.location = address;
